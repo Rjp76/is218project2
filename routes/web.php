@@ -25,14 +25,25 @@ Route::post('/contact', function () {
      echo "email: ". $data['email'].'<br>';
      echo "message: ".$data['body'];
 });
-Route::get('/signup', function () {
-    return view('pages.signup');
+Route::get('/register', function () {
+    return view('pages.register');
 });
 Route::get('/login', function () {
-    return view('pages.login');
+    return view('auth.passwords.login');
 });
 Route::post('/login', function () {
     $logdata = request()->all();
     echo "email: ". $logdata['email'].'<br>';
-    echo "message: ".$logdata['body'];
+    echo "message: ".$logdata['password'];
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
