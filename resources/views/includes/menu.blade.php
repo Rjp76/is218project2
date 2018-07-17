@@ -15,13 +15,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="/contact">Contact</a>
             </li>
-            //add log in and registration in here somehow
+            <li class="nav-item">
+                <a class="nav-link" href="/viewmsg">View Messages</a>
+            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/login">Log In</a>
+                    <a class="dropdown-item" href="/signup">Sign Up</a>
                 </div>
             </li>
         </ul>

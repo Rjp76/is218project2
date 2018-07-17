@@ -25,3 +25,14 @@ Route::post('/contact', function () {
      echo "email: ". $data['email'].'<br>';
      echo "message: ".$data['body'];
 });
+Route::get('/signup', function () {
+    return view('pages.signup');
+});
+Route::get('/login', function () {
+    return view('pages.login');
+});
+Route::post('/login', function () {
+    $logdata = request()->all();
+    echo "email: ". $logdata['email'].'<br>';
+    echo "message: ".$logdata['body'];
+});
