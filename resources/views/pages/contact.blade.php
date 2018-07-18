@@ -15,7 +15,7 @@
                     <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
                 </div>
                 <div class="form-group">
-                    <label for="body">Message</label>
+                    <label for="msg">Message</label>
                     <textarea name="msg" class="form-control" id="msg" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Send</button>

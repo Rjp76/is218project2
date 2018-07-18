@@ -25,4 +25,5 @@ Route::post('/viewmsg', 'PageController@viewmsg')->name('viewmsg');
 Route::get('/thanks/{email}/{sub}/{msg}', 'PageController@thanks')->name('thanks');
 Route::get('/register', 'PageController@register')->name('register');
 Route::get('/login', 'PageController@login')->name('login');
+Route::get('/home', 'PageController@home')->name('home');
 Auth::routes();

@@ -19,7 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link" class="nav-link" href="{{route('viewmsg')}}">View Messages</a>
                 </li>
-               <!-- <li><a class="nav-link" href="{{route('thanks',['email' => 'blank@gmaik,com', 'sub'=> 'blank', 'msg'=> 'empty' ])}}">Thanks</a></li> -->
+<!--                <li><a class="nav-link" href="{{route('thanks',['email' => 'blank@gmaik,com', 'sub'=> 'blank', 'msg'=> 'empty' ])}}">Thanks</a></li> -->
 
                 @guest
                     <li class="nav-item">

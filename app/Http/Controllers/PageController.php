@@ -24,6 +24,9 @@ class PageController extends Controller
     function login() {
         return view('pages.login');
     }
+    function home() {
+        return view('home');
+    }
 
     function store(Request $request) {
 
@@ -34,7 +37,6 @@ class PageController extends Controller
         return redirect()->route('thanks',['email' => $email, 'sub'=>$sub, 'msg'=>$msg]);
     }
     function thanks($email, $sub, $msg) {
-
 
         return view('pages.thanks')->with(compact('email','sub','msg'));
     }
