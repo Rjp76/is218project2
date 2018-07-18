@@ -6,19 +6,20 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('index')}}">Home</a><span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="{{route('about')}}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
+                    <a class="nav-link" href="{{route('contact')}}">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/viewmsg">View Messages</a>
+                    <a class="nav-link" class="nav-link" href="{{route('viewmsg')}}">View Messages</a>
                 </li>
+               <!-- <li><a class="nav-link" href="{{route('thanks',['email' => 'blank@gmaik,com', 'sub'=> 'blank', 'msg'=> 'empty' ])}}">Thanks</a></li> -->
 
                 @guest
                     <li class="nav-item">

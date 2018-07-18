@@ -11,43 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
-Route::post('/contact', function () {
+Route::get('/', 'PageController@index')->name('index');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/contact', 'PageController@contact')->name('contact');
+/*Route::post('/contact', function () {
      $data = request()->all();
-     echo "email: ". $data['email'].'<br>';
-     echo "message: ".$data['body'];
-});
-Route::get('/register', function () {
-    return view('pages.register');
-});
-Route::get('/login', function () {
-    return view('auth.passwords.login');
-});
-Route::post('/login', function () {
-    $logdata = request()->all();
-    echo "email: ". $logdata['email'].'<br>';
-    echo "message: ".$logdata['password'];
-});
+     echo "Email: ". $data['email'].'<br>';
+     echo "Subject: ". $data['subject'].'<br>';
+     echo "Message: ".$data['body'];
+}); */
+Route::post('/contact', 'PageController@store')->name('contact.store');
+Route::post('/viewmsg', 'PageController@viewmsg')->name('viewmsg');
+Route::get('/thanks/{email}/{sub}/{msg}', 'PageController@thanks')->name('thanks');
+Route::get('/register', 'PageController@register')->name('register');
+Route::get('/login', 'PageController@login')->name('login');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
